@@ -9,7 +9,7 @@ void mnist_get_model(unsigned char **model_buf, size_t *model_size)
     static std::vector<unsigned char> model;
     if (model.empty())
     {
-        std::ifstream is("resources/mnist/mnist_model.tflite", std::ios::binary);
+        std::ifstream is("resources/mnist/q_mnist_model.tflite", std::ios::binary);
         is.seekg(0, is.end);
         model.resize(is.tellg());
         is.seekg(0, is.beg);
